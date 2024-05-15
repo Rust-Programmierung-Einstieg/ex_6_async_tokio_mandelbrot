@@ -1,0 +1,13 @@
+
+#!/usr/bin/gnuplot    
+reset
+set term png size 800, 800;
+set output "plot.png";
+set datafile separator ',';
+
+set xlabel "re";
+set ylabel "im";
+
+set style line 1 lw 1
+set size square
+plot "mandelbrot.csv" u 1:2:3 w image not
